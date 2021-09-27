@@ -32,7 +32,7 @@ dat_ind <- read.csv("Datasets/Milkys_individual_data_selection_utf8.csv", encodi
 ggplot(dat_ind %>% filter(Substance == "HG" & Species == "Gadus morhua" & Station_code == "30B"), 
        aes(Body_length, Conc, color = Limit_of_quantification)) +
   geom_point() +
-  scale_color_manual(values = c("blue", "red")) +
+  scale_color_manual(values = c("black", "red")) +
   facet_wrap(vars(Year)) +
   labs(title = "Mercury concentration vs. body length")
 
