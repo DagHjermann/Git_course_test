@@ -63,10 +63,13 @@ dat_median <- dat_ind %>%
 
 ```{r, fig.width=9, fig.height=7}
 
+# DHJ changed number 5
+
 param <- "CB118"
 ggplot(dat_median %>% filter(Substance == param & Species == "Mytilus edulis"), 
        aes(Year, Conc, color = Limit_of_quantification)) +
   geom_point() +
+  scale_color_manual(values = c("red3", "skyblue")) +
   facet_wrap(vars(Station_code)) +
   labs(title = paste(param, "in blue mussel"))
 
